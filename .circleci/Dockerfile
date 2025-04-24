@@ -47,6 +47,7 @@ RUN chmod +x /opt/circleci/venv/bin/* && \
     chmod +x /opt/circleci/venv/bin/run.sh
 ENTRYPOINT ["/opt/circleci/venv/bin/entrypoint.sh"]
 EXPOSE 8080
+EXPOSE 3000
 CMD ["bash", "-c", "/opt/circleci/venv/bin/run.sh"]
 
 
