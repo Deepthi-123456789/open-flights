@@ -1,8 +1,4 @@
 FROM alpine:3.18
-LABEL maintainer="CircleCI <        
-https://circleci.com/>"
-LABEL org.opencontainers.image.authors="CircleCI <https://circleci.com/>"
-LABEL org.opencontainers.image.url="https://circleci.com/"
 WORKDIR /opt/circleci
 COPY . /opt/circleci
 RUN apk add --no-cache --update \
