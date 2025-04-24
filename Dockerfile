@@ -26,7 +26,6 @@ RUN yarn install
 # Precompile assets for production
 ENV RAILS_ENV=production
 ENV DISABLE_DATABASE_ENVIRONMENT_CHECK=1
-ENV SECRET_KEY_BASE=dummy_secret_key
 RUN bundle exec rails assets:precompile
 
 # Expose the default Rails port
