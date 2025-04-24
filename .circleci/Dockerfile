@@ -1,6 +1,6 @@
 FROM alpine:3.18
 WORKDIR /opt/circleci
-COPY . /opt/circleci
+COPY . .
 RUN apk add --no-cache --update \
     bash \
     curl \
