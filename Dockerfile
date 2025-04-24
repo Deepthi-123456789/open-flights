@@ -23,9 +23,15 @@ COPY . .
 # Install JavaScript dependencies
 RUN yarn install
 
-# Precompile assets for production
+# Set environment variables for production
 ENV RAILS_ENV=production
 ENV DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+
+# Add a dummy SECRET_KEY_BASE to avoid errors during precompilation
+ARG SECRET_KEY_BASE=dummy_secret_key
+ENV SECRET_KEY_BASE=${SECRET_KEY_BASE}
+
+# Precompile assets for production
 RUN bundle exec rails assets:precompile
 
 # Expose the default Rails port
